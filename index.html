@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,12 +11,528 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-eb {
+        font-family: "EB Garamond", serif;
+      }
+    </style>
+    <!-- tailwind global -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundColor: {
+              brown: "#B68C5A;",
+            },
+            backgroundImage: {
+              "banner-bg": "url('./images/banner.png')",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/249b13431b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- Header part starts -->
-    <header></header>
+    <header class="max-w-screen-xl mx-auto px-5 py-5">
+      <!-- nav part starts -->
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </label>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-500 rounded-box w-52"
+              >
+                <li>
+                  <a>Home <i class="fa-solid fa-angle-right"></i></a>
+                </li>
+                <li>
+                  <a>Cases <i class="fa-solid fa-angle-right"></i></a>
+                </li>
+                <li>
+                  <a>Blog <i class="fa-solid fa-angle-right"></i></a>
+                </li>
+                <li>
+                  <a>Contact Us <i class="fa-solid fa-angle-right"></i></a>
+                </li>
+              </ul>
+            </div>
+            <img class="m-0 p-0" src="./images/logo2.png" alt="" />
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li>
+                <a>Home <i class="fa-solid fa-angle-right"></i></a>
+              </li>
+              <li>
+                <a>Cases <i class="fa-solid fa-angle-right"></i></a>
+              </li>
+              <li>
+                <a>Blog <i class="fa-solid fa-angle-right"></i></a>
+              </li>
+              <li>
+                <a>Contact Us <i class="fa-solid fa-angle-right"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn normal-case bg-brown text-white hover:bg-black"
+              >Free Consultation</a
+            >
+          </div>
+        </div>
+      </nav>
+      <!-- Banner part starts -->
+      <div
+        class="hero min-h-[calc(60vh-66px)] rounded-xl my-10"
+        style="background-image: url('./images/banner.png')"
+      >
+        <div class="hero-overlay rounded-xl bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-lg">
+            <h1 class="mb-5 text-5xl font-eb font-bold">
+              We Provide Effective Legal Solutions
+            </h1>
+            <p class="mb-5">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+            <div class="join gap-3">
+              <div>
+                <div>
+                  <input
+                    class="input input-bordered"
+                    placeholder="Search your services"
+                  />
+                </div>
+              </div>
+              <div class="indicator">
+                <span class="indicator-item badge bg-brown text-white"
+                  >new</span
+                >
+                <button
+                  class="btn rounded-xl bg-brown text-white hover:bg-black"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- Main part starts -->
-    <main></main>
+
+    <main class="max-w-screen-xl mx-auto px-5 py-5 font-eb text-center">
+      <!-- Legal practice area -->
+      <section>
+        <h3 class="text-3xl font-extrabold">The Legal Practice Area</h3>
+        <p class="text-l my-5 max-w-xl mx-auto">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour.
+        </p>
+        <div
+          class="flex flex-col md:flex-row lg:flex-row justify-center items-center"
+        >
+          <!-- Card -->
+          <div
+            class="card w-96 bg-base-100 border-b border-r rounded-none hover:bg-gray-100"
+          >
+            <figure class="px-10 pt-10">
+              <img src="./images/tax.png" alt="Shoes" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Tax Law</h2>
+              <p>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour.
+              </p>
+              <i
+                class="fa-solid fa-arrow-right bg-brown rounded-full p-2 text-white"
+                style="color: #ffffff"
+              ></i>
+            </div>
+          </div>
+          <div
+            class="card w-96 bg-base-100 border-r border-b rounded-none hover:bg-gray-100"
+          >
+            <figure class="px-10 pt-10">
+              <img src="./images/divorce.png" alt="Shoes" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Divorce Law</h2>
+              <p>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour.
+              </p>
+              <i
+                class="fa-solid fa-arrow-right bg-brown rounded-full p-2 text-white"
+                style="color: #ffffff"
+              ></i>
+            </div>
+          </div>
+          <div
+            class="card w-96 bg-base-100 border-r border-b rounded-none hover:bg-gray-100"
+          >
+            <figure class="px-10 pt-10">
+              <img src="./images/education.png" alt="Shoes" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Education Law</h2>
+              <p>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour.
+              </p>
+              <i
+                class="fa-solid fa-arrow-right bg-brown rounded-full p-2 text-white"
+                style="color: #ffffff"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col md:flex-row lg:flex-row justify-center items-center"
+        >
+          <!-- Card -->
+          <div
+            class="card w-96 bg-base-100 border-r rounded-none hover:bg-gray-100"
+          >
+            <figure class="px-10 pt-10">
+              <img src="./images/business.png" alt="Shoes" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Business Law</h2>
+              <p>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour.
+              </p>
+              <i
+                class="fa-solid fa-arrow-right bg-brown rounded-full p-2 text-white"
+                style="color: #ffffff"
+              ></i>
+            </div>
+          </div>
+          <div
+            class="card w-96 bg-base-100 border-r rounded-none hover:bg-gray-100"
+          >
+            <figure class="px-10 pt-10">
+              <img src="./images/criminal.png" alt="Shoes" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Criminal Law</h2>
+              <p>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour.
+              </p>
+              <i
+                class="fa-solid fa-arrow-right bg-brown rounded-full p-2 text-white"
+                style="color: #ffffff"
+              ></i>
+            </div>
+          </div>
+          <div
+            class="card w-96 bg-base-100 border-r rounded-none hover:bg-gray-100"
+          >
+            <figure class="px-10 pt-10">
+              <img src="./images/child.png" alt="Shoes" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Child Support</h2>
+              <p>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour.
+              </p>
+              <i
+                class="fa-solid fa-arrow-right bg-brown rounded-full p-2 text-white"
+                style="color: #ffffff"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonial Area -->
+      <section>
+        <h3 class="text-3xl font-extrabold mt-20">What Our Client Say</h3>
+        <p class="text-l my-5 max-w-xl mx-auto">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour.
+        </p>
+        <div
+          id="carouselExampleCaptions"
+          class="relative"
+          data-te-carousel-init
+          data-te-carousel-slide
+        >
+          <!--Carousel indicators-->
+          <div
+            class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+            data-te-carousel-indicators
+          >
+            <button
+              type="button"
+              data-te-target="#carouselExampleCaptions"
+              data-te-slide-to="0"
+              data-te-carousel-active
+              class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-te-target="#carouselExampleCaptions"
+              data-te-slide-to="1"
+              class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-te-target="#carouselExampleCaptions"
+              data-te-slide-to="2"
+              class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+
+          <!--Carousel items-->
+          <div
+            class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
+          >
+            <!--First item-->
+            <div
+              class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-active
+              data-te-carousel-item
+              style="backface-visibility: hidden"
+            >
+              <img src="./images/slider-1.jpg" class="block w-full" alt="..." />
+              <div
+                class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block"
+              >
+                <div class="max-w-xl mx-auto">
+                  <img src="./images/address.png" alt="" />
+                </div>
+                <h5 class="text-xl">First slide label</h5>
+                <p>
+                  Some representative placeholder content for the first slide.
+                </p>
+              </div>
+            </div>
+            <!--Second item-->
+            <div
+              class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-item
+              style="backface-visibility: hidden"
+            >
+              <img src="./images/slider-3.jpg" class="block w-full" alt="..." />
+              <div
+                class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block"
+              >
+                <h5 class="text-xl">Second slide label</h5>
+                <p>
+                  Some representative placeholder content for the second slide.
+                </p>
+              </div>
+            </div>
+            <!--Third item-->
+            <div
+              class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-te-carousel-item
+              style="backface-visibility: hidden"
+            >
+              <img src="./images/slider-2.jpg" class="block w-full" alt="..." />
+              <div
+                class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block"
+              >
+                <h5 class="text-xl">Third slide label</h5>
+                <p>
+                  Some representative placeholder content for the third slide.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--Carousel controls - prev item-->
+          <button
+            class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            type="button"
+            data-te-target="#carouselExampleCaptions"
+            data-te-slide="prev"
+          >
+            <span class="inline-block h-8 w-8">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </span>
+            <span
+              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              >Previous</span
+            >
+          </button>
+          <!--Carousel controls - next item-->
+          <button
+            class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            type="button"
+            data-te-target="#carouselExampleCaptions"
+            data-te-slide="next"
+          >
+            <span class="inline-block h-8 w-8">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </span>
+            <span
+              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              >Next</span
+            >
+          </button>
+        </div>
+      </section>
+      <!-- Faq Section -->
+      <section>
+        <h3 class="text-3xl font-extrabold mt-20">
+          Frequently Asked Any Questions
+        </h3>
+        <p class="text-l my-5 max-w-xl mx-auto">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour.
+        </p>
+        <!-- Faq part -->
+        <div
+          class="text-left flex flex-col md:flex-row lg:flex-row gap-10 items-center"
+        >
+          <div class="flex-1 space-y-5">
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" checked="checked" />
+              <div class="collapse-title text-xl font-medium">
+                1. Are application fee waivers available?
+              </div>
+              <div class="collapse-content">
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, .
+                </p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                2. Are application fee waivers available?
+              </div>
+              <div class="collapse-content">
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour,
+                </p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                3. Are application fee waivers available?
+              </div>
+              <div class="collapse-content">
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour,
+                </p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                4. Are application fee waivers available?
+              </div>
+              <div class="collapse-content">
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour,
+                </p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                5. Are application fee waivers available?
+              </div>
+              <div class="collapse-content">
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour,
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1">
+            <img src="/images/faq.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- Footer part starts -->
     <footer></footer>
   </body>
